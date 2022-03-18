@@ -32,8 +32,8 @@ async def get_distance_between_positions_haversine(
     delta_lat = lat_2 - lat_1
 
     # Haversine Formula
-    a = sin(delta_lat/2) * sin(delta_lat/2) + cos(lat_1) * cos(lat_2) * sin(delta_lon/2) * sin(delta_lon/2)
-    a = sin(delta_lat / 2.0) * sin(delta_lat / 2.0) + sin(delta_lon / 2.0) * sin(delta_lon / 2.0) * cos(lat_1) * cos(lat_2)
+    a = sin(delta_lat / 2.0) * sin(delta_lat / 2.0) + sin(delta_lon / 2.0)\
+            * sin(delta_lon / 2.0) * cos(lat_1) * cos(lat_2)
 
     c = atan2(sqrt(a), sqrt(1.0 - a))
     d = C_EARTH * 2 * c
@@ -61,10 +61,10 @@ async def get_distance_between_positions_law_cosines(
     lon_2 = radians(second_lon_deg)
 
     delta_lon = lon_2 - lon_1
-    delta_lat = lat_2 - lat_1
 
     # Spherical Law of Cosines
-    d = acos(sin(lat_1) * sin(lat_2) + cos(lat_1) * cos(lat_2) * cos(delta_lon)) * C_EARTH
+    d = acos(sin(lat_1) * sin(lat_2) + cos(lat_1)\
+            * cos(lat_2) * cos(delta_lon)) * C_EARTH
 
     return d
 
