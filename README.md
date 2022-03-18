@@ -5,7 +5,7 @@ A very simple API to calculate distance between lat-lon points.
 To run:
 ```python
 python3 -m venv venv --prompt fastapi
-pip install fastapi[all]
+pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
