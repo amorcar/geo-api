@@ -6,7 +6,7 @@ To run:
 ```python
 python3 -m venv venv --prompt fastapi
 pip install -r requirements.txt
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 
 Docs at: ```http://120.0.0.1:8000/docs```
