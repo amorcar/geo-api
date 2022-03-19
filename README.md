@@ -2,20 +2,12 @@
 
 A very simple API to calculate distance between lat-lon points.
 
-To run:
-```python
-python3 -m venv venv --prompt fastapi
-source venv/bin/activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
-
-Docs at: ```http://120.0.0.1:8000/docs```
+Docs at: ```http://52.207.248.221:5000/docs```
 
 Examples:
 ```bash
 curl -X 'POST' \
-  'http://127.0.0.1:8000/api/distance/haversine/' \
+  'http://52.207.248.221:5000/api/distance/haversine/' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -33,7 +25,7 @@ curl -X 'POST' \
 
 ```bash
 curl -X 'POST' \
-  'http://127.0.0.1:8000/api/distance/cosines/' \
+  'http://52.207.248.221:5000/api/distance/cosines/' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -51,7 +43,7 @@ curl -X 'POST' \
 
 ```bash
 curl -X 'POST' \
-  'http://127.0.0.1:8000/api/distance/equirectangular/' \
+  'http://52.207.248.221:5000/api/distance/equirectangular/' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -84,4 +76,12 @@ Project structure:
 │  └── main.log
 ├── main.py
 └── README.md
+```
+
+To run:
+```python
+python3 -m venv venv --prompt fastapi
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
 ```
