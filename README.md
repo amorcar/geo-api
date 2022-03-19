@@ -2,7 +2,7 @@
 
 A very simple API to calculate distance between lat-lon points.
 
-Docs at: ```http://52.207.248.221:5000/docs```
+Docs at: [http://52.207.248.221:5000/docs](http://52.207.248.221:5000/docs)
 
 Examples:
 ```bash
