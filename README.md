@@ -2,12 +2,11 @@
 
 A very simple API to calculate distance between lat-lon points.
 
-Docs at: [http://52.207.248.221:5000/docs](http://52.207.248.221:5000/docs)
 
 Examples:
 ```bash
 curl -X 'POST' \
-  'http://52.207.248.221:5000/api/distance/haversine/' \
+  'http://127.0.0.1:8000/api/distance/haversine/' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -25,7 +24,7 @@ curl -X 'POST' \
 
 ```bash
 curl -X 'POST' \
-  'http://52.207.248.221:5000/api/distance/cosines/' \
+  'http://127.0.0.1:8000/api/distance/cosines/' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -43,7 +42,7 @@ curl -X 'POST' \
 
 ```bash
 curl -X 'POST' \
-  'http://52.207.248.221:5000/api/distance/equirectangular/' \
+  'http://127.0.0.1:8000/api/distance/equirectangular/' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -85,3 +84,4 @@ source venv/bin/activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
+Docs at: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
